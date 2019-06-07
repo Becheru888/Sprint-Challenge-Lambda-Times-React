@@ -5,8 +5,11 @@ import uuid from "uuid";
 const Cards = props => {
   return (
     <div className="cards-container">
-      { props.card.map(card => (<Card card={card} key={uuid()}/>))}
+      { props.cards.map(card => (
+      <Card card={card} key={uuid()}/>
       
+      ))}
+
     </div>
   )
 }
