@@ -11,7 +11,7 @@ clickToLog = () => {
 }
 
     render(){
-       return <Button onClick={this.clickToLog}>LogIn</Button>
+       return <Button onClick={this.clickToLog}>Login</Button>
     }
 }
 
@@ -19,5 +19,7 @@ export default Login
 
 
 const Button = styled.button`
-
+ margin-top:300px;
+ width:300px;
+ height:100px;
 `
