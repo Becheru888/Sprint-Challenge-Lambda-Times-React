@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types'
 
+
 const Tab = props => {
   
   /* Using your props, determine if the `tab` prop matches the `selectedTab` prop, 
@@ -8,7 +9,7 @@ const Tab = props => {
       if it is not it should just be 'tab'*/
   return (
     <div
-      className={ props.tab === props.selectedTab ?'tab active-tab' : 'tab'}
+      className={ props.tab === props.selectedTab ? 'active' : 'tab'}
       onClick={() => {
         props.selectTabhandler(props.tab);
         props.selectedTab(props.tab);

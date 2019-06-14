@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import { carouselData } from '../../data'
+import { carouselData } from '../../data';
 // Complete this Carousel 
 export default class Carousel extends Component {
   constructor(props){
     super(props);
     this.state = {
-
+      
     }
   }
   componentDidMount(){

@@ -5,13 +5,12 @@ import uuid from "uuid";
 
 
 const Tabs = props => {
-  console.log(props)
   return (
     <div className="tabs">
       <div className="topics">
         <span className="title">TRENDING TOPICS:</span>
         {props.tabs.map(tab=>(
-          <Tab selectedTab ={props.selectedtab} selectTabhandler={props.selectTabHandler} tab ={tab} key={uuid()}/>
+          <Tab selectedTab ={props.selectedtab} selectTabhandler={props.selectTabHandler} tab={tab} key={uuid()}/>
         ))
           
           /* map over the tabs provided on your props, create a new Tab component for each one.

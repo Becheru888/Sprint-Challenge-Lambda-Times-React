@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import Carousel from '../Carousel/Carousel'
 import Tabs from './Tabs';
 import Cards from './Cards';
 
@@ -16,7 +16,6 @@ export default class Content extends Component {
     };
     
   }
-// console.log(this.state.tabs)
   componentDidMount = () => {
      
     this.setState({
@@ -69,6 +68,7 @@ export default class Content extends Component {
           and `selectTabHandler` that includes the function to change the selected tab
         */}
         <Tabs  selectTabHandler= {this.filterCards} tabs={this.state.tabs} selectedtab={this.changeSelected}/>
+        <Carousel />
         <Cards cards={this.filterCards()} />
       </div>
     );
