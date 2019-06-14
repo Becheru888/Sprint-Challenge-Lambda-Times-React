@@ -1,16 +1,16 @@
-import React, { Component } from 'react';
-import TopBar from './components/TopBar';
-import Header from './components/Header';
-import Content from './components/Content/Content';
+import React from 'react';
+import TimesPage from './components/TimesPage/TimesPage';
+import Login from './components/Login';
+import withAuthentication from '../src/withAuthentication/withAuthentication'
 
 const App = () => {
   return (
     <div className="App">
-      <TopBar />
-      <Header />
-      <Content />
+     <Comp/>
     </div>
   );
 }
 
 export default App;
+
+const Comp = withAuthentication(TimesPage)(Login)
