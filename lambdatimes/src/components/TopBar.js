@@ -3,9 +3,18 @@ import styled from 'styled-components'
 // Refactor this component to use styled components and not classNames. 
 // You can find the corresponding CSS in the CSS/index.css file
 
-const TopBar = () => {
+class TopBar extends React.Component{
+  
+  
+clickLogOut = () => {
+  console.log('cliked')
+  localStorage.removeItem('user')
+  window.location.reload();
+}
+
+  render(){
   return (
-    <Topbar>
+    <Top>
       <Container>
         <ContainerLeft>
           <LeftSpan>TOPICS</LeftSpan><LeftSpan>SEARCH</LeftSpan>
@@ -14,11 +23,12 @@ const TopBar = () => {
           <Centerspan>GENERAL</Centerspan><Centerspan>BROWNBAG</Centerspan><Centerspan>RANDOM</Centerspan><Centerspan>MUSIC</Centerspan><Centerspan>ANNOUNCEMENTS</Centerspan>
         </ContainerCenter>
         <ContainerRight>
-          <RightSpan>LOG IN</RightSpan>
+          <RightSpan onClick={this.clickLogOut}>LOG OUT</RightSpan>
         </ContainerRight>
       </Container>
-    </Topbar>
+    </Top>
   )
+  }
 }
 
 export default TopBar;
@@ -28,7 +38,7 @@ export default TopBar;
 //// Style Component ////
 
 
-const Topbar = styled.div`
+const Top = styled.div`
 width: 100%;
 display: flex;
 justify-content: center;

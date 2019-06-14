@@ -1,10 +1,23 @@
 import React from 'react';
+import styled from 'styled-components';
+
 
 class Login extends React.Component{
 
+
+clickToLog = () => {
+    localStorage.setItem('user','Username');
+    window.location.reload();
+}
+
     render(){
-       return <div><h1>LOG IN PLEASE</h1></div>
+       return <Button onClick={this.clickToLog}>LogIn</Button>
     }
 }
 
 export default Login
+
+
+const Button = styled.button`
+
+`
